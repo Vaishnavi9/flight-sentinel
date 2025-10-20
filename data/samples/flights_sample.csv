@@ -1,0 +1,3 @@
+flight_id,carrier,origin,destination,scheduled_dep,actual_dep
+LH123,LH,FRA,AMS,2025-01-05T10:10:00Z,2025-01-05T10:42:00Z
+KL456,KL,AMS,CDG,2025-01-05T12:00:00Z,2025-01-05T12:05:00Z
