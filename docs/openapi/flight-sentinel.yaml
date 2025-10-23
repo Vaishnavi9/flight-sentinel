@@ -1,0 +1,34 @@
+openapi: 3.0.3
+info:
+  title: Flight Sentinel API
+  version: 1.0.0
+  description: Real-time flight status and delay analytics.
+servers:
+  - url: http://localhost:8080
+paths:
+  /api/v1/flights/latest:
+    get:
+      summary: Get latest status for a flight
+      parameters:
+        - in: query
+          name: flight
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FlightStatus'
+components:
+  schemas:
+    FlightStatus:
+      type: object
+      properties:
+        flight: { type: string }
+        origin: { type: string }
+        destination: { type: string }
+        status: { type: string, enum: [ON_TIME, DELAYED, CANCELLED] }
+        delayMinutes: { type: integer, format: int32 }

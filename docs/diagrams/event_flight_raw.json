@@ -1,8 +1,0 @@
-{
-  "flight_id": "LH123",
-  "carrier": "LH",
-  "origin": "FRA",
-  "destination": "AMS",
-  "scheduled_dep": "2025-01-05T10:10:00Z",
-  "actual_dep": "2025-01-05T10:42:00Z"
-}
